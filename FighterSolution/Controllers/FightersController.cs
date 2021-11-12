@@ -17,36 +17,36 @@ namespace FighterSolution.Controllers
         }  
   
         [HttpGet]  
-        public IEnumerable<fighter> Get()  
+        public IEnumerable<Fighter> Get()  
         {  
             return _dataAccessProvider.GetFighterRecords();  
         }  
   
         [HttpPost]  
-        public IActionResult Create([FromBody]fighter Fighter)  
+        public IActionResult Create([FromBody]Fighter fighter)  
         {  
             if (ModelState.IsValid)  
             {  
                 Guid obj = Guid.NewGuid();  
-                Fighter.id = obj.ToString();  
-                _dataAccessProvider.AddFighterRecord(Fighter);  
+                fighter.id = obj.ToString();  
+                _dataAccessProvider.AddFighterRecord(fighter);  
                 return Ok();  
             }  
             return BadRequest();  
         }  
   
         [HttpGet("{id}")]  
-        public fighter Details(string id)  
+        public Fighter Details(string id)  
         {  
             return _dataAccessProvider.GetFighterSingleRecord(id);  
         }  
   
         [HttpPut]  
-        public IActionResult Edit([FromBody]fighter Fighter)  
+        public IActionResult Edit([FromBody]Fighter fighter)  
         {  
             if (ModelState.IsValid)  
             {  
-                _dataAccessProvider.UpdateFighterRecord(Fighter);  
+                _dataAccessProvider.UpdateFighterRecord(fighter);  
                 return Ok();  
             }  
             return BadRequest();  

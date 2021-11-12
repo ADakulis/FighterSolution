@@ -10,7 +10,7 @@ namespace FighterSolution.DataAccess
         {  
         }  
   
-        public DbSet<fighter> fighters { get; set; }  
+        public DbSet<Fighter> fighters { get; set; }  
   
         protected override void OnModelCreating(ModelBuilder builder)  
         {  

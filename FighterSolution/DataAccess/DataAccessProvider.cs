@@ -13,15 +13,15 @@ namespace FighterSolution.DataAccess
             _context = context;  
         }  
   
-        public void AddFighterRecord(fighter Fighter)  
+        public void AddFighterRecord(Fighter fighter)  
         {  
-            _context.fighters.Add(Fighter);  
+            _context.fighters.Add(fighter);  
             _context.SaveChanges();  
         }  
   
-        public void UpdateFighterRecord(fighter Fighter)  
+        public void UpdateFighterRecord(Fighter fighter)  
         {  
-            _context.fighters.Update(Fighter);  
+            _context.fighters.Update(fighter);  
             _context.SaveChanges();  
         }  
   
@@ -32,12 +32,12 @@ namespace FighterSolution.DataAccess
             _context.SaveChanges();  
         }  
   
-        public fighter GetFighterSingleRecord(string id)  
+        public Fighter GetFighterSingleRecord(string id)  
         {  
             return _context.fighters.FirstOrDefault(t => t.id == id);  
         }  
   
-        public List<fighter> GetFighterRecords()  
+        public List<Fighter> GetFighterRecords()  
         {  
             return _context.fighters.ToList();  
         }

@@ -5,10 +5,10 @@ namespace FighterSolution.DataAccess
 {
     public interface IDataAccessProvider
     {
-        void AddFighterRecord(fighter Fighter);  
-        void UpdateFighterRecord(fighter Fighter);  
+        void AddFighterRecord(Fighter fighter);  
+        void UpdateFighterRecord(Fighter fighter);  
         void DeleteFighterRecord(string id);  
-        fighter GetFighterSingleRecord(string id);  
-        List<fighter> GetFighterRecords(); 
+        Fighter GetFighterSingleRecord(string id);  
+        List<Fighter> GetFighterRecords(); 
     }
 }
