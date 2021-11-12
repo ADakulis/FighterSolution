@@ -31,12 +31,15 @@ namespace FighterSolution
   
             services.AddDbContext<PostgreSqlContext>(options => options.UseNpgsql(sqlConnectionString));  
   
-            services.AddScoped<IDataAccessProvider, DataAccessProvider>();  
+            services.AddScoped<IDataAccessProvider, DataAccessProvider>();
+
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors(options =>options.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader());
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
