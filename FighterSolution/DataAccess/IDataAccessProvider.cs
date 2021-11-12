@@ -5,8 +5,8 @@ namespace FighterSolution.DataAccess
 {
     public interface IDataAccessProvider
     {
-        void AddFighterRecord(fighter patient);  
-        void UpdateFighterRecord(fighter patient);  
+        void AddFighterRecord(fighter Fighter);  
+        void UpdateFighterRecord(fighter Fighter);  
         void DeleteFighterRecord(string id);  
         fighter GetFighterSingleRecord(string id);  
         List<fighter> GetFighterRecords(); 
