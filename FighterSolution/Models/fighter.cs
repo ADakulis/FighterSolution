@@ -16,5 +16,6 @@ namespace FighterSolution.Models
         //[Column(TypeName = "character(40)")]
         public string fightstyle{ get; set; }
         public int wins { get; set; }
+        
     }
 }
