@@ -15,31 +15,31 @@ namespace FighterSolution.DataAccess
   
         public void AddFighterRecord(Fighter fighter)  
         {  
-            _context.fighters.Add(fighter);  
+            _context.Fighters.Add(fighter);  
             _context.SaveChanges();  
         }  
   
         public void UpdateFighterRecord(Fighter fighter)  
         {  
-            _context.fighters.Update(fighter);  
+            _context.Fighters.Update(fighter);  
             _context.SaveChanges();  
         }  
   
         public void DeleteFighterRecord(string id)  
         {  
-            var entity = _context.fighters.FirstOrDefault(t => t.id == id);  
-            _context.fighters.Remove(entity);  
+            var entity = _context.Fighters.FirstOrDefault(t => t.id == id);  
+            _context.Fighters.Remove(entity);  
             _context.SaveChanges();  
         }  
   
         public Fighter GetFighterSingleRecord(string id)  
         {  
-            return _context.fighters.FirstOrDefault(t => t.id == id);  
+            return _context.Fighters.FirstOrDefault(t => t.id == id);  
         }  
   
         public List<Fighter> GetFighterRecords()  
         {  
-            return _context.fighters.ToList();  
+            return _context.Fighters.ToList();  
         }
     }
 }

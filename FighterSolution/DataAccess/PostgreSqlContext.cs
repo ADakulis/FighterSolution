@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using FighterSolution.Models;  
 
 namespace FighterSolution.DataAccess
@@ -10,7 +9,7 @@ namespace FighterSolution.DataAccess
         {  
         }  
   
-        public DbSet<Fighter> fighters { get; set; }  
+        public DbSet<Fighter> Fighters { get; set; }  
   
         protected override void OnModelCreating(ModelBuilder builder)  
         {  

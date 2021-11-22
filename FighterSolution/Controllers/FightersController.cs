@@ -27,8 +27,9 @@ namespace FighterSolution.Controllers
         {  
             if (ModelState.IsValid)  
             {  
-                Guid obj = Guid.NewGuid();  
-                fighter.id = obj.ToString();  
+                //Guid obj = Guid.NewGuid();  
+                //fighter.id = obj.ToString();  
+                fighter.id = Guid.NewGuid().ToString();
                 _dataAccessProvider.AddFighterRecord(fighter);  
                 return Ok();  
             }  
