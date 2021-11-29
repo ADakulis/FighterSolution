@@ -20,8 +20,15 @@ namespace FighterSolution.Controllers
         public IEnumerable<Fighter> Get()  
         {  
             return _dataAccessProvider.GetFighterRecords();  
-        }  
-  
+        }
+
+        [HttpGet("{dashboard}")]
+        public IEnumerable<Fighter> Get(string dashboard)
+        {
+            return _dataAccessProvider.GetTopFighters();
+        }
+
+
         [HttpPost]  
         public IActionResult Create([FromBody]Fighter fighter)  
         {  

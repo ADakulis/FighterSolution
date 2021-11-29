@@ -9,6 +9,7 @@ namespace FighterSolution.DataAccess
         void UpdateFighterRecord(Fighter fighter);  
         void DeleteFighterRecord(string id);  
         Fighter GetFighterSingleRecord(string id);  
-        List<Fighter> GetFighterRecords(); 
+        List<Fighter> GetFighterRecords();
+        List<Fighter> GetTopFighters();
     }
 }
